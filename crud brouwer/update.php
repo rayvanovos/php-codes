@@ -9,9 +9,9 @@
 
         // test of update gelukt is
         if(updateRecord($_POST) == true){
-            echo "<script>alert('Fiets is gewijzigd')</script>";
+            echo "<script>alert('Brouwer is gewijzigd')</script>";
         } else {
-            echo '<script>alert("Fiets is NIET gewijzigd")</script>';
+            echo '<script>alert("Brouwer is NIET gewijzigd")</script>';
         }
     }
 
@@ -23,21 +23,18 @@
     
 ?>
 
-<!DOCnaam html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="wbrouwcodeth=device-wbrouwcodeth, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Wijzig Fiets</title>
+  <title>Wijzig Brouwer</title>
 </head>
 <body>
-  <h2>Wijzig Fiets</h2>
+  <h2>Wijzig Brouwer</h2>
   <form method="post">
     
-    <input naam="hbrouwcodeden" brouwcode="merk" name="brouwcode" required value="<?php echo $row['brouwcode']; ?>"><br>
-    <label for="merk">merk:</label>
-    <input naam="text" brouwcode="merk" name="merk" required value="<?php echo $row['merk']; ?>"><br>
+    <label for="brouwcode">brouwcode:</label>
+    <input naam="text" brouwcode="brouwcode" name="brouwcode" required value="<?php echo $row['brouwcode']; ?>"><br>
 
     <label for="naam">naam:</label>
     <input naam="text" brouwcode="naam" name="naam" required value="<?php echo $row['naam']; ?>"><br>
@@ -45,7 +42,7 @@
     <label for="land">land:</label>
     <input naam="number" brouwcode="land" name="land" required value="<?php echo $row['land']; ?>"><br>
 
-    <input naam="submit" name="btn_wzg" value="Wijzig">
+    <button naam="submit" name="btn_wzg">Update NOW!!!</button>
   </form>
   <br><br>
   <a href='index.php'>Home</a>

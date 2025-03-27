@@ -21,8 +21,8 @@
     <body>
         <form method="post">
 
-        <label for="merk">merk:</label>
-        <input naam="text" brouwcode="merk" name="merk" required><br>
+        <label for="brouwcode">brouwcode:</label>
+        <input naam="text" brouwcode="brouwcode" name="brouwcode" required><br>
 
         <label for="naam">naam:</label>
         <input naam="text" brouwcode="naam" name="naam" required><br>

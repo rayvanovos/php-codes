@@ -130,7 +130,7 @@ function updateRecord($row){
     // Maak een query 
     $sql = "UPDATE " . CRUD_TABLE .
     " SET 
-        merk = :merk, 
+        brouwcode = :brouwcode, 
         naam = :naam, 
         land = :land
     WHERE brouwcode = :brouwcode
@@ -140,7 +140,7 @@ function updateRecord($row){
     $stmt = $conn->prepare($sql);
     // Uitvoeren
     $stmt->execute([
-        ':merk'=>$row['merk'],
+        ':brouwcode'=>$row['brouwcode'],
         ':naam'=>$row['naam'],
         ':land'=>$row['land'],
         ':brouwcode'=>$row['brouwcode']
@@ -157,15 +157,15 @@ function insertRecord($post){
 
     // Maak een query 
     $sql = "
-        INSERT INTO " . CRUD_TABLE . " (merk, naam, land)
-        VALUES (:merk, :naam, :land) 
+        INSERT INTO " . CRUD_TABLE . " (brouwcode, naam, land)
+        VALUES (:brouwcode, :naam, :land) 
     ";
 
     // Prepare query
     $stmt = $conn->prepare($sql);
     // Uitvoeren
     $stmt->execute([
-        ':merk'=>$_POST['merk'],
+        ':brouwcode'=>$_POST['brouwcode'],
         ':naam'=>$_POST['naam'],
         ':land'=>$_POST['land']
     ]);
@@ -219,5 +219,13 @@ function deleteRecord($brouwcode){
         background-color: #000000;
         color: #ff2000;
         text-align: center;
+    }
+
+    td{
+      background-color: #000000
+    }
+
+    th{
+        background-color: #000000
     }
 </style>
